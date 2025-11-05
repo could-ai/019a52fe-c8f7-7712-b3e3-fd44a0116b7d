@@ -8,11 +8,13 @@ class GoalScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('เป้าหมายการออม'),
+        backgroundColor: Colors.green[50],
+        elevation: 0,
       ),
       body: const Center(
         child: Text(
-          'หน้ารายละเอียดเป้าหมายการออม',
-          style: TextStyle(fontSize: 24),
+          'ตั้งและติดตามเป้าหมายการออมของคุณ',
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class TransactionScreen extends StatelessWidget {
+  const TransactionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('โปรไฟล์และการตั้งค่า'),
+        title: const Text('บันทึกรายรับ-รายจ่าย'),
         backgroundColor: Colors.green[50],
         elevation: 0,
       ),
       body: const Center(
         child: Text(
-          'จัดการโปรไฟล์, ความปลอดภัย, และการตั้งค่า',
+          'หน้าสำหรับบันทึกและดูรายการ',
           style: TextStyle(fontSize: 20),
         ),
       ),

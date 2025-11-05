@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'goal_screen.dart';
-import 'calendar_screen.dart';
+import 'transaction_screen.dart';
+import 'reports_screen.dart';
 import 'profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,8 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
+    TransactionScreen(),
     GoalScreen(),
-    CalendarScreen(),
+    ReportsScreen(),
     ProfileScreen(),
   ];
 
@@ -32,14 +34,19 @@ class _HomeScreenState extends State<HomeScreen> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed, // Ensure all items are visible
         items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.edit_document),
+            label: 'บันทึก',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.track_changes),
             label: 'เป้าหมาย',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            label: 'ปฏิทิน',
+            icon: Icon(Icons.analytics),
+            label: 'รายงาน',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
@@ -47,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue[800],
+        selectedItemColor: Colors.green[800],
         onTap: _onItemTapped,
       ),
     );
